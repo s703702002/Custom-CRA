@@ -1,4 +1,3 @@
-const { override, useEslintRc } = require("customize-cra");
-const path = require("path");
+const { override, useEslintRc, disableEsLint } = require("customize-cra");
 
-module.exports = override(useEslintRc());
+module.exports = override(useEslintRc(), disableEsLint());

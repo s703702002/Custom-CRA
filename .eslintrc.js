@@ -7,7 +7,9 @@ module.exports = {
     jest: true,
   },
   extends: [
+    "eslint:recommended",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "prettier/react"
   ],
   globals: {
@@ -27,10 +29,15 @@ module.exports = {
   ],
   rules: {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-underscore-dangle": "off",
-    "global-require": "off"
+    "react-hooks/exhaustive-deps": "warn"
   },
+  settings: {
+    react: {
+      version: "detect",
+      flowVersion: "0.53"
+    }
+  }
 };
