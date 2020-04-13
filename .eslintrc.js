@@ -7,10 +7,8 @@ module.exports = {
     jest: true,
   },
   extends: [
-    "eslint:recommended",
+    "react-app",
     "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "prettier/react"
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,20 +22,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'react',
-    "react-hooks"
+    'prettier'
   ],
   rules: {
     "prettier/prettier": "error",
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
   },
-  settings: {
-    react: {
-      version: "detect",
-      flowVersion: "0.53"
-    }
-  }
 };
